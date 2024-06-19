@@ -127,13 +127,13 @@
 	              AND (R.START_DT IS NULL OR R.END_DT IS NULL)
 	        ) T
 	        WHERE T.RN BETWEEN #{begin} AND #{end}
-	    ) T2
+				)T2
 	</select>
 
 	<select id="getFacReserve"
-	        parameterType="java.util.Map"
+	        parameterType="Map"
 	        resultMap="FacilityReserveMap">
-	    SELECT *
+	    SELECT RENT_ID, START_DT, END_DT, RENT_STATE, FACILITY_ID, RENT_USER
 	    FROM (
 	        SELECT RENT_ID, START_DT, END_DT, RENT_STATE, FACILITY_ID, RENT_USER,
 	               ROW_NUMBER() OVER (ORDER BY END_DT ASC) AS RN
@@ -145,10 +145,12 @@
 	
 	<insert id="insertFacReserve"
 			parameterType="FacilityReserveDto">
+<!--  			
 		<selectKey order="BEFORE" keyProperty="rentId" resultType="int">
 	      SELECT FACILITY_RESERVE_SEQ.NEXTVAL
 	        FROM DUAL
     	</selectKey>
+ -->   	
 	INSERT INTO FACILITY_RESERVE_T(
 		  RENT_ID
 		, START_DT
@@ -156,11 +158,11 @@
 		, FACILITY_ID
 		, RENT_USER
 	) VALUES(
-		  #{rentId}
+		  FACILITY_RESERVE_SEQ.NEXTVAL
 		, #{startDt}
 		, #{endDt}
-		, #{facilityId}
-		, 'tester1'
+		, #{fac.facilityId}
+		, #{rentUser}
 	)
 	</insert>
 	

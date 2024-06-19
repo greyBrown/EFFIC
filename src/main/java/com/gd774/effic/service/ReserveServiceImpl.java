@@ -6,6 +6,7 @@ import java.util.Locale.Category;
 import java.util.Map;
 import java.util.Optional;
 
+import org.apache.catalina.User;
 import org.springframework.core.io.AbstractFileResolvingResource;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -167,11 +168,11 @@ public class ReserveServiceImpl implements ReserveService {
   // 대여 자산 불러오기
   @Override
   public ResponseEntity<Map<String, Object>> getReserveFacility(HttpServletRequest request) {
-    int retotal = reserveMapper.getFacReserveCount();
-    int redisplay = 3;
-    int repage = Integer.parseInt(request.getParameter("repage"));
+    int total = reserveMapper.getFacReserveCount();
+    int display = 3;
+    int page = Integer.parseInt(request.getParameter("page"));
     System.out.println("서비스이지롱");
-    pageUtils.setPaging(retotal, redisplay, repage);
+    pageUtils.setPaging(total, display, page);
     Map<String, Object> map = Map.of("begin", pageUtils.getBegin()
         ,"end", pageUtils.getEnd());
     return new ResponseEntity<>(Map.of("getFacReserve", reserveMapper.getFacReserve(map)
@@ -180,27 +181,39 @@ public class ReserveServiceImpl implements ReserveService {
   }
 
   // 자산 예약 모달 클릭시 insert
+  @Transactional
   @Override
   public int insertFacReserve(HttpServletRequest request) {
     int facilityId = Integer.parseInt(request.getParameter("facilityId"));
     String startDt = request.getParameter("startDt");
     String endDt = request.getParameter("endDt");
-    String rentUser = request.getParameter("rentUser");
+    int rentTerm = Integer.parseInt(request.getParameter("rentTerm"));
     System.out.println(facilityId);
     System.out.println(startDt);
     System.out.println(endDt);
     
-    UserDto user = new UserDto();
-    user.setEmpId(rentUser);
+    UserDto user = (UserDto) request.getSession().getAttribute("user");
+    String rentUser = user.getName();
+    System.out.println(rentUser);
+    FacilityManageDto facility = new FacilityManageDto();
+    facility.setFacilityId(facilityId);
+    facility.setRentTerm(rentTerm);
     
     FacilityReserveDto facReserve = FacilityReserveDto.builder()
-                                          .facilityId(facilityId)
+                                          .fac(facility)
                                           .startDt(startDt)
                                           .endDt(endDt)
+                                          .user(user)
+                                          .rentUser(rentUser)
                                           .build();
-    
-    //.user(user)
-    return reserveMapper.insertFacReserve(facReserve);
+    System.out.println("facReserve====>"+facReserve);
+    int cnt = 0;
+    try {
+       cnt = reserveMapper.insertFacReserve(facReserve);
+    } catch(Exception e) {
+      e.printStackTrace();
+    }
+    return cnt;
   }
   
 

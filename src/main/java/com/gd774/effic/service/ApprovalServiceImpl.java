@@ -76,6 +76,8 @@ public class ApprovalServiceImpl implements ApprovalService {
                 .docState(docState)
                 .build();
 
+        System.out.println("appDoc=====>");
+        System.out.println(appDoc);
         // 문서 등록 실행
         approvalMapper.insertAppDoc(appDoc);
 
@@ -168,6 +170,8 @@ public class ApprovalServiceImpl implements ApprovalService {
 	    
 	    map.put("empId", empId);
 	    map.put("depId", depId);
+	    
+	    
     	
 	    List<AppDocDto> myDocList = approvalMapper.getMyDocList(map);
 	    model.addAttribute("myDocList", myDocList);	
@@ -204,11 +208,9 @@ public class ApprovalServiceImpl implements ApprovalService {
     	Map<String, Object> map = new HashMap<>();
     	
     	map.put("empId", approver);
-    	map.put("docState", 0);
     	
     	List<AppDocDto> myAppDocList = approvalMapper.getMyAppDocList(map);
 	    model.addAttribute("myAppDocList", myAppDocList);	
-    	
     	
     }
     
@@ -219,7 +221,7 @@ public class ApprovalServiceImpl implements ApprovalService {
 
     	String drafter = user.getEmpId();
 	    String approver = user.getEmpId();    
-	    String docId = request.getParameter("docId");
+	    int docId = Integer.parseInt(request.getParameter("docId"));
 	    String docState = request.getParameter("docState");
 	    
 	    String depId = user.getDepId();
