@@ -9,7 +9,8 @@
 > 파일첨부가 가능한 메세지를 1인 이상의 수신자에게 발송 가능
 > 
 
-![메세지작성.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/f08f4b84-05e4-4904-836b-ce80bb3ae186/6c0537b8-2cca-4acc-8987-320453d1c1f4/%EB%A9%94%EC%84%B8%EC%A7%80%EC%9E%91%EC%84%B1.png)
+![메세지작성](https://github.com/user-attachments/assets/0bb1e058-c249-49e5-9930-a81107fa59fe)
+
 
 1. **팀메세지/조직도/나에게 쓰기** 
     - 조직도 버튼 → 수신인 선택 후 보내기 버튼으로 전송
@@ -20,7 +21,8 @@
     - 상세보기 화면에서 툴팁형식으로 첨부파일목록을 확인
     - 첨부파일 칸을 클릭 시 첨부파일을 다운로드
         
-        ![첨부파일목록.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/f08f4b84-05e4-4904-836b-ce80bb3ae186/f5162876-dee8-409e-94ab-6cf25110cd13/%EC%B2%A8%EB%B6%80%ED%8C%8C%EC%9D%BC%EB%AA%A9%EB%A1%9D.png)
+![첨부파일목록](https://github.com/user-attachments/assets/dd97b198-c8ad-4674-b9b9-53c6d3d781e8)
+
         
 
 ## 메세지 조회
@@ -39,11 +41,12 @@
 > **받은 메세지함**
 > 
 
-![팀메세지.gif](https://prod-files-secure.s3.us-west-2.amazonaws.com/f08f4b84-05e4-4904-836b-ce80bb3ae186/cc69710f-78f0-4035-9077-c861c5b9ca3a/%ED%8C%80%EB%A9%94%EC%84%B8%EC%A7%80.gif)
+![팀메세지](https://github.com/user-attachments/assets/ea093a61-99b7-4060-8bbc-01ecbb6f2f4b)
 
-![팀메세지2.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/f08f4b84-05e4-4904-836b-ce80bb3ae186/e029525f-0ec7-4fd0-afcf-3918cf9961bc/%ED%8C%80%EB%A9%94%EC%84%B8%EC%A7%802.png)
+![팀메세지2](https://github.com/user-attachments/assets/57d003b0-6e8d-4e20-bcf8-fd240ff72c9f)
 
-![팀메세지1.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/f08f4b84-05e4-4904-836b-ce80bb3ae186/041bfc0b-4027-4b6d-9c95-c07d2d935c78/%ED%8C%80%EB%A9%94%EC%84%B8%EC%A7%801.png)
+![팀메세지1](https://github.com/user-attachments/assets/3dcc0a4a-3874-42b0-a3fb-8bb01156e27d)
+
 
 1. **미열람메세지 식별**
     - 미열람 메세지는 bold체로 강조 → 열람 후 기본 굵기로 전환
@@ -54,9 +57,11 @@
 > **보낸 메세지함**
 > 
 
-![보낸메세지목록.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/f08f4b84-05e4-4904-836b-ce80bb3ae186/678c966c-a34a-4b74-88b7-c2faa11e20b5/%EB%B3%B4%EB%82%B8%EB%A9%94%EC%84%B8%EC%A7%80%EB%AA%A9%EB%A1%9D.png)
+![보낸메세지목록](https://github.com/user-attachments/assets/3306f02f-b78e-4c2d-b468-1ea3e88c20ae)
 
-![보낸메세지읽음.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/f08f4b84-05e4-4904-836b-ce80bb3ae186/a36dda7d-7b88-4521-afa2-1c6c86a151a7/%EB%B3%B4%EB%82%B8%EB%A9%94%EC%84%B8%EC%A7%80%EC%9D%BD%EC%9D%8C.png)
+![보낸메세지읽음](https://github.com/user-attachments/assets/c0fad64e-a248-4a81-836b-b108dd1d5f55)
+
+
 
 1. **수신여부확인**
     - 메세지를 열람한 수신자 확인
@@ -66,9 +71,10 @@
 > **중요메세지함**
 > 
 
-![중요메세지설정.gif](https://prod-files-secure.s3.us-west-2.amazonaws.com/f08f4b84-05e4-4904-836b-ce80bb3ae186/a91fd776-67de-4b1c-8620-a308a58569a8/%EC%A4%91%EC%9A%94%EB%A9%94%EC%84%B8%EC%A7%80%EC%84%A4%EC%A0%95.gif)
+![중요메세지설정](https://github.com/user-attachments/assets/e49e7268-5833-4bf5-b5de-3d3ef06aa055)
 
-![중요메세지.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/f08f4b84-05e4-4904-836b-ce80bb3ae186/835dacde-b9f9-4446-a8c3-b7699fe49487/%EC%A4%91%EC%9A%94%EB%A9%94%EC%84%B8%EC%A7%80.png)
+![중요메세지](https://github.com/user-attachments/assets/d1aac365-f080-4075-8436-301b7e8f27a8)
+
 
 1. ⭐ **아이콘을 토글하여 중요메세지 설정/해제** 
     - 별 아이콘을 클릭 →  중요메세지 설정/해제
@@ -84,7 +90,7 @@
 > **휴지통**
 > 
 
-![휴지통.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/f08f4b84-05e4-4904-836b-ce80bb3ae186/9b1ea55f-9189-4043-997f-f5cb4e310983/%ED%9C%B4%EC%A7%80%ED%86%B5.png)
+![휴지통](https://github.com/user-attachments/assets/82306851-e91d-496b-baac-1dcb51bf2167)
 
 1. **휴지통 이동**
     - (보관함) 체크박스/전체선택 클릭 → 삭제버튼을 통해 휴지통 이동
@@ -96,13 +102,14 @@
 
 ## 실시간알림
 
-![메세지 전송이 완료되었다는 alert창 이후 새로고침 없이 미열람 메세지 개수가 5→6 으로 증가](https://prod-files-secure.s3.us-west-2.amazonaws.com/f08f4b84-05e4-4904-836b-ce80bb3ae186/06091a84-0714-4109-b180-3b767a7497dc/%EC%8B%A4%EC%8B%9C%EA%B0%84%EC%95%8C%EB%A6%BC.gif)
-
+![실시간알림](https://github.com/user-attachments/assets/4701c7cf-07af-4fb5-b339-13536c9b651e)
 메세지 전송이 완료되었다는 alert창 이후 새로고침 없이 미열람 메세지 개수가 5→6 으로 증가
 
-![실시간알림1.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/f08f4b84-05e4-4904-836b-ce80bb3ae186/1c7d5ac4-d948-4577-a4ef-6f1b079a046c/%EC%8B%A4%EC%8B%9C%EA%B0%84%EC%95%8C%EB%A6%BC1.png)
+![실시간알림1](https://github.com/user-attachments/assets/dd021d35-4202-4af5-9ad3-9ce2a88f503d)
 
-![실시간알림2.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/f08f4b84-05e4-4904-836b-ce80bb3ae186/2ce84899-85e0-43ff-9114-4cfe8edaeea2/%EC%8B%A4%EC%8B%9C%EA%B0%84%EC%95%8C%EB%A6%BC2.png)
+
+![실시간알림2](https://github.com/user-attachments/assets/5beb0880-858d-40bd-8041-8cdd73d3fcbe)
+
 
 1. **미열람 메세지 실시간 알림**
     - 사이드바에서 미열람 메세지 개수 실시간 확인
