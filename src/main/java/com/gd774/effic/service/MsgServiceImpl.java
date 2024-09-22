@@ -68,6 +68,7 @@ public class MsgServiceImpl implements MsgService {
 		
 		int insertMsgCount = msgMapper.insertMsg(msg);
 		
+	
 		//첨부파일이 있을경우 MSG_ATTACH_T에 삽입
 		fileLoad.doUpload(multipartRequest, msg);
 				
@@ -222,8 +223,7 @@ public class MsgServiceImpl implements MsgService {
 		      else {
 		      // originalFilename = new String(originalFilename.getBytes(""), "ISO-8859-1");
 		    	  originalFilename = URLEncoder.encode(originalFilename, "UTF-8");
-		    	  // 으ㅏ아아아아 됐다!!!!!!!! 이거 노션에 쓰겠다 ㅠㅠㅠㅠㅠㅠㅠ 쓸것임 ㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠㅠ
-		    	  // 쿼리는 꼭 돌려보고 해야한다는 거 쓰고(selectOne) 서브쿼리는 등에서 별명은 스코프안에서만 유효하다는 것도 쓸거임 ㅠㅠ
+		    	  //selectOne 오류 해결 -> 서브쿼리는 등에서 별명은 스코프안에서만 유효함!!!
 		      }
 		      
 		    } catch (Exception e) {
@@ -308,7 +308,7 @@ public class MsgServiceImpl implements MsgService {
 		 UserDto user = (UserDto)request.getSession().getAttribute("user");
 			String recipient = user.getEmpId();
 		    int total = msgMapper.getRcpCount(recipient);
-		    int display = 30;		 // 화면 봐가면서 몇개가 적당할지 찾기. 15 아님 20 아님 25
+		    int display = 30;		 // 메세지 페이징 개수 30개입니다.
 			Optional<String> opt = Optional.ofNullable(request.getParameter("page"));
 		    int page = Integer.parseInt(opt.orElse("1"));
 		    msgPaging.setPaging(total, display, page);
@@ -387,7 +387,6 @@ public class MsgServiceImpl implements MsgService {
 	 
 	 @Override
 	public int cancelSentChkImp(int msgId) {
-		// TODO Auto-generated method stub
 		return msgMapper.cancelSentImpList(msgId);
 	}
 	 
@@ -503,7 +502,7 @@ public class MsgServiceImpl implements MsgService {
 		String depId = user.getDepId();
 		Map<String, Object> forCount = Map.of("recipient", recipient, "depId", depId);
 	    int total = msgMapper.getTeamInboxCount(forCount);
-	    int display = 30;		 // 화면 봐가면서 몇개가 적당할지 찾기. 15 아님 20 아님 25
+	    int display = 30;		
 		Optional<String> opt = Optional.ofNullable(request.getParameter("page"));
 	    int page = Integer.parseInt(opt.orElse("1"));
 	    msgPaging.setPaging(total, display, page);

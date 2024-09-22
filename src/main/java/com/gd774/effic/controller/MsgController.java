@@ -44,7 +44,7 @@ public class MsgController {
 		UserDto user =  (UserDto) request.getSession().getAttribute("user");
 		String empId = user.getEmpId();
 		String depId= user.getDepId();
-		System.out.println(depId);
+		//System.out.println(depId);
 		String teamList = String.join(",", msgService.getTeamRegister(depId, empId));
 		
 		model.addAttribute("teamList", teamList);
@@ -258,9 +258,9 @@ public class MsgController {
 	@ResponseBody
 	public int updateImpChkImpt(@RequestParam String sort){
 		String msgSort = sort.substring(0, 1); 
-		System.out.println(msgSort);// 조아쓰 잘 나옴
+		//System.out.println(msgSort);// 조아쓰 잘 나옴
 		int pk = Integer.parseInt(sort.substring(1));
-		System.out.println(pk);
+		//System.out.println(pk);
 		
 		int updateCount = 0;
 		
@@ -283,11 +283,11 @@ public class MsgController {
 	@ResponseBody
 	public int updateSentToBin(@RequestParam(value="checkValues[]") List<Integer> checkValues){
 		 
-		System.out.println("컨트롤러 돌고 있음");
+		//System.out.println("컨트롤러 돌고 있음");
 		int updateCount = 0;
 	
 		for(int check : checkValues) {
-			System.out.println(check);
+		//	System.out.println(check);
 			updateCount += msgService.updateSentToBin(check);
 		}
 		
@@ -299,11 +299,11 @@ public class MsgController {
 	@ResponseBody
 	public int updateInobxToBin(@RequestParam(value="checkValues[]") List<Integer> checkValues){
 		 
-		System.out.println("컨트롤러 돌고 있음");
+		//System.out.println("컨트롤러 돌고 있음");
 		int updateCount = 0;
 	
 		for(int check : checkValues) {
-			System.out.println(check);
+			//System.out.println(check);
 			updateCount += msgService.updateInboxToBin(check);
 		}
 		
